@@ -1,0 +1,253 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Authentication Container */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+}
+
+.auth-form {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+.auth-form.wide-form {
+    max-width: 600px;
+}
+
+.auth-form h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.1);
+}
+
+.form-group small {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+    font-size: 12px;
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.btn-primary {
+    background-color: #667eea;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #5568d3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Alerts */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border-left: 4px solid;
+}
+
+.alert-error {
+    background-color: #fee;
+    color: #c33;
+    border-left-color: #c33;
+}
+
+.alert-success {
+    background-color: #efe;
+    color: #3c3;
+    border-left-color: #3c3;
+}
+
+.alert-warning {
+    background-color: #ffd;
+    color: #880;
+    border-left-color: #880;
+}
+
+/* Auth Links */
+.auth-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.auth-link a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-link a:hover {
+    text-decoration: underline;
+}
+
+/* Error Page */
+.error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.error-content {
+    background: white;
+    padding: 60px 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.error-content h1 {
+    font-size: 100px;
+    color: #667eea;
+    margin-bottom: 10px;
+}
+
+.error-content h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.error-content p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-header h1 {
+    font-size: 24px;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+.user-menu a:hover {
+    opacity: 0.8;
+}
+
+.logout-btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .auth-form,
+    .auth-form.wide-form {
+        max-width: 100%;
+        padding: 30px 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .error-content h1 {
+        font-size: 60px;
+    }
+
+    .error-content h2 {
+        font-size: 24px;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
